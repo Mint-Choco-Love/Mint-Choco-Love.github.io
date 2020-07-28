@@ -4,7 +4,42 @@
 ## Java, JVM
 
 ## Algorithms and PS
-[곱셈의 역원](/ps/multiplicative_inverse)
+1. [곱셈의 역원](/ps/multiplicative_inverse)
+2. 이항계수
+3. stars and bars
+4. 유클리드 호제법과 최대공약수
+5. 확장 유클리드 호제법
+6. 스택, 큐, 덱
+7. isPrime
+8. 페르마의 소정리
+9. 라빈-밀러 소수 판정
+10. 서로소 집합
+11. sqrt decomposition, Mo's algorithm
+12. segment tree
+13. dynamic programming
+14. greedy approach
+15. suffix array
+16. KMP
+17. 라빈-카프
+18. Z-함수(x)
+19. 카탈란 수
+20. 포함-배제
+21. 번사이드 보조정리(x)
+22. 이분탐색
+23. 삼분탐색
+24. 그래프 순회
+25. SCC
+26. 위상 정렬
+27. 0-1bfs
+28. 다익스트라
+29. 벨만-포드
+30. 플로이드-워셜
+31. 최소 신장 트리
+32. prüfer code
+33. LCA
+34. MCMF
+35. 스케쥴링
+
 
 ## Design Patterns
 

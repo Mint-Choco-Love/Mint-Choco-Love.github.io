@@ -1,5 +1,5 @@
 ## Introduction
-[Link](../../introduction)
+[Link](https://mint-choco-love.github.io/introduction)
 
 ## Java, JVM
 

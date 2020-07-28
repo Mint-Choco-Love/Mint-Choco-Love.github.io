@@ -39,6 +39,16 @@
 33. LCA
 34. MCMF
 35. 스케쥴링
+36. backtracking
+37. 완전탐색
+38. 슬라이딩 윈도우, 투 포인터
+39. Red-Black Trees
+40. AVL Trees
+41. Leftist Trees
+42. Height-Balanced Trees, Weight-Balanced Tress
+43. Finger Trees
+44. Binomial Heaps
+45. Fibonacci Heaps
 
 
 ## Design Patterns

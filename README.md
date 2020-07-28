@@ -72,8 +72,9 @@ Codeforces
 
 ## F7days
 
-## TalesWeaver
+## TalesWeaver  
 
+## Daylog
 
 
 

@@ -4,6 +4,7 @@
 ## Java, JVM
 
 ## Algorithms and PS
+[곱셈의 역원](/ps/multiplicative_inverse)
 
 ## Design Patterns
 

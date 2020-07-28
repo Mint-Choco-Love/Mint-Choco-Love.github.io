@@ -1,5 +1,5 @@
-## introduction
-[Link](/introduction)
+## Introduction
+[Link](../../introduction)
 
 ## Java, JVM
 

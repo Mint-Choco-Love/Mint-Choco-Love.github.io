@@ -48,7 +48,7 @@
 42. Height-Balanced Trees, Weight-Balanced Tress
 43. Finger Trees(x)
 44. Binomial Heaps
-45. Fibonacci Heaps(x)
+45. Fibonacci Heaps(x)  
 (x): 아직 모름
 
 

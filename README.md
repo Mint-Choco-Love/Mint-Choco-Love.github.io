@@ -12,17 +12,17 @@
 6. 스택, 큐, 덱
 7. isPrime
 8. 페르마의 소정리
-9. 라빈-밀러 소수 판정
+9. 라빈-밀러 소수 판정(x)
 10. 서로소 집합
-11. sqrt decomposition, Mo's algorithm
+11. sqrt decomposition, Mo's algorithm(x)
 12. segment tree
 13. dynamic programming
 14. greedy approach
 15. suffix array
 16. KMP
-17. 라빈-카프
+17. 라빈-카프(x)
 18. Z-함수(x)
-19. 카탈란 수
+19. 카탈란 수(x)
 20. 포함-배제
 21. 번사이드 보조정리(x)
 22. 이분탐색
@@ -46,9 +46,10 @@
 40. AVL Trees
 41. Leftist Trees
 42. Height-Balanced Trees, Weight-Balanced Tress
-43. Finger Trees
+43. Finger Trees(x)
 44. Binomial Heaps
-45. Fibonacci Heaps
+45. Fibonacci Heaps(x)
+(x): 아직 모름
 
 
 ## Design Patterns

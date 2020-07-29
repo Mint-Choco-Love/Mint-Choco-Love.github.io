@@ -2,6 +2,7 @@
 [소개](/introduction)
 
 ## Java, JVM
+1. [정렬](/java/sorting)
 
 ## Algorithms and PS
 AtCoder

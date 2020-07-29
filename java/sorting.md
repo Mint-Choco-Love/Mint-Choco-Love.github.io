@@ -28,10 +28,10 @@
           Arrays.sort(arr, Collections.reverseOrder()); // error?
           Collections.sort(arr, Collections.reverseOrder());
 ```
-  위의 Arrays.sort는 primitive-type에 대해서는 적용되지 않습니다. 제네릭 T[] 타입을 요구하지만 primitive-type은 제네릭 타입의 인자로 사용할 수 없기 때문입니다. JVM은 제네릭 타입을 Object로 캐스팅하는데, primitive-type은 Object가 아닙니다.
-  .reverseOrder()는 java.util.Comparator<T> 타입을 반환합니다.
-4. Comparable<T>
-5. Comparator<T>
-6. 사용자 정의 데이터 타입
-7. 성능
-8. Arrays.sort와 Collections.sort
+위의 Arrays.sort는 primitive-type에 대해서는 적용되지 않습니다. 제네릭 T[] 타입을 요구하지만 primitive-type은 제네릭 타입의 인자로 사용할 수 없기 때문입니다. JVM은 제네릭 타입을 Object로 캐스팅하는데, primitive-type은 Object가 아닙니다.
+  .reverseOrder()는 java.util.Comparator<T> 타입을 반환합니다.  
+4. Comparable<T>  
+5. Comparator<T>  
+6. 사용자 정의 데이터 타입  
+7. 성능  
+8. Arrays.sort와 Collections.sort  

@@ -68,4 +68,25 @@ Comparator<T>는 익명 클래스를 사용하여 인스턴스를 만듭니다. 
         };
 ```
 6. 성능  
-7. Arrays.sort와 Collections.sort  
+대략적인 성능을 알아보기 위해 로컬에서 테스트를 해보았습니다. 자세한 시간복잡도는 아래 섹션에서 다룹니다.  
+여기서 다루는 테스트는 Integer와 Long 타입에 대해, Array에 넣어 Arrays.sort를 하거나, ArrayList에 넣어 Collections.sort를 하거나, 혹은 이 둘을 Stream으로 바꾸어 정렬해 보는 것입니다. 각 원소의 값은 java.util.Random에서 생성한 값들이며, 100에서 1_000_000까지의 원소의 개수에 대해 정렬 메소드를 실행합니다. 동일한 메소드를 10번씩 새로 랜덤 값을 만들어 정렬한 뒤 평균값을 구합니다. 따라서 측정되는 시간 값에는 정렬 메소드의 실행시간뿐만 아니라, 원소를 만들고 추가하고 접근하는 시간도 포함됩니다.  
+다음과 같은 결론을 얻을 수 있었습니다.  
+첫째, 단순히 Array에 값을 담아 Arrays.sort를 하는 것이 가장 빠릅니다. 다만 원소 개수가 많아지면 Array를 Stream으로 다루는 경우가 더 빠른 경우도 있었습니다. 유의미한 차이는 아닙니다.   
+둘째, Array를 Stream으로 다루는 것이, 대체로 ArrayList<T>를 Collections.sort한 것보다 더 빨랐습니다. 접근 속도에서 차이가 많이 나지 않았나 생각합니다.  
+셋째, 모든 테스트 결과에서, ArrayList<T>를 Stream으로 다루어 정렬한 것이 가장 느렸습니다. 최선의 경우에도 Collections.sort와 실행시간이 같았습니다.  
+다음은 결과값입니다. 모든 값은 Array, ArrayList<T>(~<T>), Integer/LongStream(~Stream), Stream<T> 순입니다.    
+Integer  Array    <T>      Stream   Stream<T>
+#100     0.10 ms, 0.30 ms, 0.70 ms, 0.80 ms(x8)  
+#1000    0.10 ms, 0.90 ms, 0.20 ms, 1.40 ms(x14)  
+#10000   2.20 ms, 6.60 ms, 5.10 ms, 8.80 ms(x4)  
+#100000  20.60 ms, 40.70 ms, 12.20 ms, 40.70 ms(x2)  
+#1000000 103.40 ms, 493.70 ms, 98.80 ms, 660.20 ms(x6.4)  
+
+Long     Array    <T>      Stream   Stream<T>
+#100     0.00 ms, 0.10 ms, 0.30 ms, 0.30 ms(x0)    
+#1000    0.20 ms, 1.00 ms, 0.30 ms, 2.50 ms(x12)   
+#10000   2.30 ms, 4.80 ms, 2.50 ms, 12.90 ms(x5.6)  
+#100000  8.40 ms, 25.50 ms, 9.50 ms, 28.60 ms(x3.4)  
+#1000000 94.10 ms, 611.30 ms, 123.10 ms, 723.10 ms(x7.7)  
+
+7. 시간복잡도

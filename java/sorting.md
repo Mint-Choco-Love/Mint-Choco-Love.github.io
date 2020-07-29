@@ -90,7 +90,7 @@ Comparator<T>는 익명 클래스를 사용하여 인스턴스를 만듭니다. 
 셋째, 모든 테스트 결과에서, ArrayList<T>를 Stream으로 다루어 정렬한 것이 가장 느렸습니다. 최선의 경우에도 Collections.sort와 실행시간이 같았습니다.  
 다음은 결과값입니다. 모든 값은 Array, ArrayList<T>(~<T>), Integer/LongStream(~Stream), Stream<T> 순입니다.    
   
-        ```java  
+         
         @FunctionalInterface
         interface Function {
                 void function(final int size);
@@ -108,7 +108,7 @@ Comparator<T>는 익명 클래스를 사용하여 인스턴스를 만듭니다. 
                 }
                 System.out.printf("%.2f ms, ", ret / (double)10);
         }
-        ```  
+          
         
 
 ![results](/assets/java/sorting/results.png)  

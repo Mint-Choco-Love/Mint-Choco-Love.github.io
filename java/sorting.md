@@ -1,6 +1,6 @@
 ## Java의 정렬  
 1. 가변 정렬  
-정렬 메소드를 호출했을 때, 인자로 넘겨진 정렬 그 자체가 스스로 정렬되는 가변(mutable) 정렬은 Arrays.sort와 Collections.sort 두 정적 메소드로 할 수 있습니다.
+정렬 메소드를 호출했을 때, 인자로 넘겨진 정렬 그 자체가 스스로 정렬되는 가변(mutable) 정렬은 Arrays.sort와 Collections.sort 두 정적 메소드로 할 수 있습니다.  
 ```markdown  
 // Arrays.sort
         int[] arr = new int[size];
@@ -14,7 +14,7 @@
 ```  
 
 2. 불변 정렬  
-정렬 메소드를 호출했을 때, 인자로 넘겨진 정렬은 변하지 않고 정렬된 새로운 값을 리턴하는 불변(immutable) 정렬은 Stream<T>의 메소드로 할 수 있습니다.
+정렬 메소드를 호출했을 때, 인자로 넘겨진 정렬은 변하지 않고 정렬된 새로운 값을 리턴하는 불변(immutable) 정렬은 Stream<T>의 메소드로 할 수 있습니다.  
 ```markdown  
   // arr의 타입은 int[]. IntegerStream
   arr = Arrays.stream(arr).sorted().toArray();
@@ -39,7 +39,7 @@ JVM은 제네릭 타입을 Object로 캐스팅하는데, primitive-type은 Objec
 Comparable<T> 인터페이스 구현은 public int compareTo(T o)를 직접 만들어주면 됩니다. 클래스의 this가 가리킬 인스턴스를 부등호의 좌측 값, compareTo 메소드의 인자를 부등호의 우측 값이라 했을 때,  
 좌 < 우 이면 -1 리턴,  
 좌 == 우 이면 0 리턴,  
-좌 > 우 이면 1을 리턴하게 하면 됩니다. 이때, 부호가 같으면 꼭 +/-1을 리턴하지 않아도 됩니다. 예를 들어 -2를 리턴하는 것도 괜찮습니다.
+좌 > 우 이면 1을 리턴하게 하면 됩니다. 이때, 부호가 같으면 꼭 +/-1을 리턴하지 않아도 됩니다. 예를 들어 -2를 리턴하는 것도 괜찮습니다.  
 
 ```markdown  
   class Obj implements Comparable<Obj> {
@@ -58,7 +58,8 @@ Comparable<T> 인터페이스 구현은 public int compareTo(T o)를 직접 만�
 앞서 살펴본 .sort 함수는 두 번째 매개변수로 인터페이스 Comparator<T>의 인스턴스를 받습니다.  
 만일 우리가 기존의 Comparable 규칙을 망가뜨리지 않고 다른 식으로 정렬하고 싶거나, 한두 번만 다른 규칙으로 정렬하고 싶다면 Comparator<T>를 정렬 메소드에 넘겨주면 됩니다.  
 Comparator<T>는 익명 클래스를 사용하여 인스턴스를 만듭니다. 이때는 int compare(T o1, T o2)라는 메소드를 새로 오버라이딩합니다.  
-추상 메소드가 하나이므로, 함수형 인터페이스입니다. 따라서 람다 표현식을 넘기는 것도 괜찮습니다.
+추상 메소드가 하나이므로, 함수형 인터페이스입니다. 따라서 람다 표현식을 넘기는 것도 괜찮습니다.  
+        
 ```markdown  
         // lambda expression
         Comparator<Integer> comp = (x, y) -> { return x - y;};

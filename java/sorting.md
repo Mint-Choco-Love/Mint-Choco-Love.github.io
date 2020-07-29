@@ -1,7 +1,7 @@
 ## Java의 정렬  
 1. 가변 정렬  
 정렬 메소드를 호출했을 때, 인자로 넘겨진 정렬 그 자체가 스스로 정렬되는 가변(mutable) 정렬은 Arrays.sort와 Collections.sort 두 정적 메소드로 할 수 있습니다.  
-```markdown  
+```java  
 // Arrays.sort
         int[] arr = new int[size];
         for(int i = 0; i < size; i++) arr[i] = rand.nextInt();
@@ -15,7 +15,7 @@
 
 2. 불변 정렬  
 정렬 메소드를 호출했을 때, 인자로 넘겨진 정렬은 변하지 않고 정렬된 새로운 값을 리턴하는 불변(immutable) 정렬은 Stream<T>의 메소드로 할 수 있습니다.  
-```markdown  
+```java  
   // arr의 타입은 int[]. IntegerStream
   arr = Arrays.stream(arr).sorted().toArray();
   
@@ -28,7 +28,7 @@
 아래의 Arrays.sort는 primitive-type에 대해서는 적용되지 않습니다. 제네릭 T[] 타입을 요구하지만 primitive-type은 제네릭 타입의 인자로 사용할 수 없기 때문입니다.  
 JVM은 제네릭 타입을 Object로 캐스팅하는데, primitive-type은 Object가 아닙니다. .reverseOrder()는 java.util.Comparator<T> 타입을 반환합니다.  
         
-```markdown  
+```java  
 
           Arrays.sort(arr, Collections.reverseOrder()); // error?
           Collections.sort(arr, Collections.reverseOrder());
@@ -41,7 +41,7 @@ Comparable<T> 인터페이스 구현은 public int compareTo(T o)를 직접 만�
 좌 == 우 이면 0 리턴,  
 좌 > 우 이면 1을 리턴하게 하면 됩니다. 이때, 부호가 같으면 꼭 +/-1을 리턴하지 않아도 됩니다. 예를 들어 -2를 리턴하는 것도 괜찮습니다.  
 
-```markdown  
+```java  
   class Obj implements Comparable<Obj> {
         int value;
         
@@ -60,7 +60,7 @@ Comparable<T> 인터페이스 구현은 public int compareTo(T o)를 직접 만�
 Comparator<T>는 익명 클래스를 사용하여 인스턴스를 만듭니다. 이때는 int compare(T o1, T o2)라는 메소드를 새로 오버라이딩합니다.  
 추상 메소드가 하나이므로, 함수형 인터페이스입니다. 따라서 람다 표현식을 넘기는 것도 괜찮습니다.  
         
-```markdown  
+```java  
         // lambda expression
         Comparator<Integer> comp = (x, y) -> { return x - y;};
         

@@ -1,6 +1,8 @@
 ## Java의 정렬  
 1. 가변 정렬  
 정렬 메소드를 호출했을 때, 인자로 넘겨진 정렬 그 자체가 스스로 정렬되는 가변(mutable) 정렬은 Arrays.sort와 Collections.sort 두 정적 메소드로 할 수 있습니다.  
+
+
 ```java  
 // Arrays.sort
         int[] arr = new int[size];
@@ -15,6 +17,7 @@
 
 2. 불변 정렬  
 정렬 메소드를 호출했을 때, 인자로 넘겨진 정렬은 변하지 않고 정렬된 새로운 값을 리턴하는 불변(immutable) 정렬은 Stream<T>의 메소드로 할 수 있습니다.  
+        
 ```java  
   // arr의 타입은 int[]. IntegerStream
   arr = Arrays.stream(arr).sorted().toArray();

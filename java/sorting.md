@@ -32,7 +32,24 @@ JVM은 제네릭 타입을 Object로 캐스팅하는데, primitive-type은 Objec
 ```  
 
 4. Comparable<T>  
+새로운 타입을 만들었다고 해 봅시다. 이 타입의 정렬 기준을 컴파일러는 알 수 없으므로, 우리가 새로 만들어줘야 합니다. 이때 Comparable<T> 인터페이스를 구현합니다.  
+Comparable<T> 인터페이스 구현은 public int compareTo(T o)를 직접 만들어주면 됩니다. 클래스의 this가 가리킬 인스턴스를 부등호의 좌측 값, compareTo 메소드의 인자를 부등호의 우측 값이라 했을 때,  
+좌 < 우 이면 -1 리턴,  
+좌 == 우 이면 0 리턴,  
+좌 > 우 이면 1을 리턴하게 하면 됩니다. 이때, 부호가 같으면 꼭 +/-1을 리턴하지 않아도 됩니다. 예를 들어 -2를 리턴하는 것도 괜찮습니다.
+
+```java
+  class Obj implements Comparable<Obj> {
+        int value;
+        
+        @Override
+        public int compareTo(Obj o) {
+            if(this.value < o.value) return -1;
+            else if(this.value == o.value) return 0;
+            else return 1;
+        }
+    }
+```
 5. Comparator<T>  
-6. 사용자 정의 데이터 타입  
-7. 성능  
-8. Arrays.sort와 Collections.sort  
+6. 성능  
+7. Arrays.sort와 Collections.sort  

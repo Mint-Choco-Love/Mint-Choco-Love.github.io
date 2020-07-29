@@ -51,5 +51,21 @@ Comparable<T> 인터페이스 구현은 public int compareTo(T o)를 직접 만�
     }
 ```
 5. Comparator<T>  
+앞서 살펴본 .sort 함수는 두 번째 매개변수로 인터페이스 Comparator<T>의 인스턴스를 받습니다.  
+만일 우리가 기존의 Comparable 규칙을 망가뜨리지 않고 다른 식으로 정렬하고 싶거나, 한두 번만 다른 규칙으로 정렬하고 싶다면 Comparator<T>를 정렬 메소드에 넘겨주면 됩니다.  
+Comparator<T>는 익명 클래스를 사용하여 인스턴스를 만듭니다. 이때는 int compare(T o1, T o2)라는 메소드를 새로 오버라이딩합니다.  
+추상 메소드가 하나이므로, 함수형 인터페이스입니다. 따라서 람다 표현식을 넘기는 것도 괜찮습니다.
+```java
+        // lambda expression
+        Comparator<Integer> comp = (x, y) -> { return x - y;};
+        
+        // anonymous class
+        Comparator<Integer> compp = new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1 - o2;
+            }
+        };
+```
 6. 성능  
 7. Arrays.sort와 Collections.sort  

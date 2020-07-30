@@ -114,3 +114,7 @@ Comparator<T>는 익명 클래스를 사용하여 인스턴스를 만듭니다. 
 ![results](/assets/java/sorting/results.png)  
 
 7. 시간복잡도
+Java의 Specification에는 구체적으로 얼마의 시간복잡도를 요구하는지 나와 있지 않습니다. 따라서 시간복잡도는 implementation에 따라 달라집니다. Java SE의 oracle 문서와 stackoverflow 답변을 참고하였습니다.  
+Arrays.sort 메소드는 primitive type에는 dual-pivot quick sort를 사용하며, 큰 데이터에 대해 O(n*log n)을 보장합니다. object type에는 stable한 merge sort를 사용하며, O(n*log n)을 보장합니다.  
+Collections.sort는 List<T> 인터페이스를 구현하는 타입에 대해 동작하며, 마찬가지로 stable한 merge sort를 사용합니다.  
+Stream.sorted는 그 자체로는 imtermidiate operation으로서, O(1)입니다. 스트림은 lazy하므로 연산을 파이프라인에 추가할 뿐, 실제로 곧장 정렬하지 않습니다. 파이프라인의 정렬 연산이 수행될 때는, Tim sort를 사용하며 최악의 경우 O(n*log n)입니다.

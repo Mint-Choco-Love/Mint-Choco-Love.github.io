@@ -66,7 +66,9 @@ Codeforces
 
 ## Spring
 
-## FFXIV
+## FFXIV  
+1. [흑마도사 운용법(5.x 패치 기준)](/ffxiv/howtoblm)
+2. [적마도사 운용법(5.x 패치 기준)](/ffxiv/howordm)
 
 ## BangDream
 

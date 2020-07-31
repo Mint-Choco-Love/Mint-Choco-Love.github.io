@@ -3,6 +3,7 @@
 
 ## Java, JVM
 1. [정렬](/java/sorting)
+2. [함수형 인터페이스](/java/functional_interface)
 
 ## Algorithms and PS
 AtCoder

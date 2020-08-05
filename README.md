@@ -6,7 +6,7 @@
 2. [함수형 인터페이스](/java/functional_interface)  
 
 ## Cpp  
-1. 복사 생성자  
+1. [복사 생성자](/cpp/copy_constructor)  
 2. 복사 대입 생성자  
 3. 이동 생성자  
 4. 객체지향: 정보은닉, 캡슐화, 다형성, 상속  

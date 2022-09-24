@@ -13,6 +13,7 @@
 3. Computer Science
 
 [기록]
+
 FFXIV E1S - Clear
 FFXIV E2S - Clear
 FFXIV E3S - Clear, Favorite

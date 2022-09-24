@@ -14,16 +14,21 @@
 
 [기록]
 
-- FFXIV E1S - Clear
-- FFXIV E2S - Clear
-- FFXIV E3S - Clear, Favorite
-- FFXIV E4S - Clear, Favorite
+- FFXIV E1S,  Clear
+- FFXIV E2S, Clear
+- FFXIV E3S, Clear, Favorite
+- FFXIV E4S, Clear, Favorite
 
-- FFXIV E9S - Clear
-- FFXIV E10S - Clear, Favorite
-- FFXIV E11S - Clear, Favorite
-- FFXIV E12S - Clear
+
+- FFXIV E9S, Clear
+- FFXIV E10S, Clear, Favorite
+- FFXIV E11S, Clear, Favorite
+- FFXIV E12S, Clear
+
 
 - FFXIV P1S - Clear
 - FFXIV P2S - Clear
 - FFXIV P3S - Clear
+
+
+- 회소의존(The Chrono Jotter), Windows

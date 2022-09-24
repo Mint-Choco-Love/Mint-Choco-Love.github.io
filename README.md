@@ -6,6 +6,7 @@
 
 [어쩌다 보니 할 일]
 1. Windows Programming(MAUI)
+2. React
 
 [취미]
 1. Rust
@@ -13,22 +14,19 @@
 3. Computer Science
 
 [기록]
-
+<br/>
 - FFXIV E1S,  Clear
 - FFXIV E2S, Clear
 - FFXIV E3S, Clear, Favorite
 - FFXIV E4S, Clear, Favorite
-
-
+<br/>
 - FFXIV E9S, Clear
 - FFXIV E10S, Clear, Favorite
 - FFXIV E11S, Clear, Favorite
 - FFXIV E12S, Clear
-
-
+<br/>
 - FFXIV P1S - Clear
 - FFXIV P2S - Clear
 - FFXIV P3S - Clear
-
-
+<br/>
 - 회소의존(The Chrono Jotter), Windows
